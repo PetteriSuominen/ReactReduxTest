@@ -1,5 +1,5 @@
 
-const appReducer = (state = {}, action) => {
+const appReducer = (state = {testValue: 1}, action) => {
     return state;
 };
 

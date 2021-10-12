@@ -1,11 +1,15 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-const About = () => {
+const About = (props) => {
     return (
-        <div>
-            About
+        <div>{props.count}
         </div>
     )
 }
 
-export default About
+const mapStateToPorps = state => ({
+    count: state.app.testValue
+})
+
+export default connect(mapStateToPorps)(About);

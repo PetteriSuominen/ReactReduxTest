@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router";
 
@@ -15,13 +15,11 @@ function App() {
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <Router>
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/form" component={Form}/>
             <Route path="/" component={Home} />
           </Switch>
-        </Router>
       </ConnectedRouter>
     </Provider>
   );
